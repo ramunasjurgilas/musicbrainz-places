@@ -46,7 +46,7 @@ class BaseNetworking: NSObject {
         task.resume()
     }
     
-    func execute<T>(_ type: T.Type, onSuccess: @escaping (T) -> (), onError: @escaping (Error) -> ()) where T : Decodable {
+    func execute<T>(_ type: T.Type, onSuccess: @escaping (T) -> (), onError: @escaping (Error) -> ()) where T : Codable {
         execute(onSuccess: { (data) in
             do {
                 let result = try JSONDecoder().decode(type, from: data)

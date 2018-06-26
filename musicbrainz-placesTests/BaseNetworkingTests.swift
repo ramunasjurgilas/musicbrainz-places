@@ -10,7 +10,7 @@ import XCTest
 @testable import musicbrainz_places
 
 // Create a partial mock by subclassing the original class
-class URLSessionDataTaskMock: URLSessionDataTask {
+fileprivate class URLSessionDataTaskMock: URLSessionDataTask {
     private let closure: () -> Void
     init(closure: @escaping () -> Void) {
         self.closure = closure
@@ -23,7 +23,7 @@ class URLSessionDataTaskMock: URLSessionDataTask {
     }
 }
 
-class URLSessionMock: URLSession {
+fileprivate class URLSessionMock: URLSession {
     typealias CompletionHandler = (Data?, URLResponse?, Error?) -> Void
 
     var data: Data?
