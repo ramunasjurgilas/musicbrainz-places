@@ -13,6 +13,8 @@
 		30C951A820E27245001015B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30C951A720E27245001015B9 /* Assets.xcassets */; };
 		30C951AB20E27245001015B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30C951A920E27245001015B9 /* LaunchScreen.storyboard */; };
 		30C951B620E27245001015B9 /* musicbrainz_placesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C951B520E27245001015B9 /* musicbrainz_placesTests.swift */; };
+		30C951C320E27523001015B9 /* MusicBrainzEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C951C220E27523001015B9 /* MusicBrainzEndpoint.swift */; };
+		30C951C520E279FF001015B9 /* MusicBrainzEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C951C420E279FF001015B9 /* MusicBrainzEndpointTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		30C951B120E27245001015B9 /* musicbrainz-placesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "musicbrainz-placesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30C951B520E27245001015B9 /* musicbrainz_placesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = musicbrainz_placesTests.swift; sourceTree = "<group>"; };
 		30C951B720E27245001015B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30C951C220E27523001015B9 /* MusicBrainzEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicBrainzEndpoint.swift; sourceTree = "<group>"; };
+		30C951C420E279FF001015B9 /* MusicBrainzEndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicBrainzEndpointTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 		30C9519F20E27243001015B9 /* musicbrainz-places */ = {
 			isa = PBXGroup;
 			children = (
+				30C951C120E274F2001015B9 /* Networking */,
+				30C951C020E274E3001015B9 /* Models */,
 				30C951A020E27243001015B9 /* AppDelegate.swift */,
 				30C951A220E27243001015B9 /* ViewController.swift */,
 				30C951A420E27243001015B9 /* Main.storyboard */,
@@ -92,8 +98,24 @@
 			children = (
 				30C951B520E27245001015B9 /* musicbrainz_placesTests.swift */,
 				30C951B720E27245001015B9 /* Info.plist */,
+				30C951C420E279FF001015B9 /* MusicBrainzEndpointTests.swift */,
 			);
 			path = "musicbrainz-placesTests";
+			sourceTree = "<group>";
+		};
+		30C951C020E274E3001015B9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		30C951C120E274F2001015B9 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				30C951C220E27523001015B9 /* MusicBrainzEndpoint.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				30C951A320E27243001015B9 /* ViewController.swift in Sources */,
+				30C951C320E27523001015B9 /* MusicBrainzEndpoint.swift in Sources */,
 				30C951A120E27243001015B9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30C951C520E279FF001015B9 /* MusicBrainzEndpointTests.swift in Sources */,
 				30C951B620E27245001015B9 /* musicbrainz_placesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
