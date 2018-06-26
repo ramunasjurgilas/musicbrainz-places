@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		30C951A120E27243001015B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C951A020E27243001015B9 /* AppDelegate.swift */; };
-		30C951A320E27243001015B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C951A220E27243001015B9 /* ViewController.swift */; };
+		30C951A320E27243001015B9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C951A220E27243001015B9 /* MapViewController.swift */; };
 		30C951A620E27243001015B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30C951A420E27243001015B9 /* Main.storyboard */; };
 		30C951A820E27245001015B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30C951A720E27245001015B9 /* Assets.xcassets */; };
 		30C951AB20E27245001015B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30C951A920E27245001015B9 /* LaunchScreen.storyboard */; };
@@ -35,6 +35,8 @@
 		30C9521820E2D9A1001015B9 /* MBPlaceBatchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9521720E2D9A1001015B9 /* MBPlaceBatchRequest.swift */; };
 		30C9521A20E2E85C001015B9 /* MBPlaceBatchRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9521920E2E85C001015B9 /* MBPlaceBatchRequestTests.swift */; };
 		30C9521B20E2E8C4001015B9 /* MBPlaceBatchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9521720E2D9A1001015B9 /* MBPlaceBatchRequest.swift */; };
+		30C9521F20E2F49D001015B9 /* MapViewController+MBPlaceBatchRequestDelegate+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9521E20E2F49D001015B9 /* MapViewController+MBPlaceBatchRequestDelegate+extension.swift */; };
+		30C9522120E2F860001015B9 /* MapViewController+UISearchBarDelegate+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9522020E2F860001015B9 /* MapViewController+UISearchBarDelegate+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +52,7 @@
 /* Begin PBXFileReference section */
 		30C9519D20E27243001015B9 /* musicbrainz-places.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "musicbrainz-places.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30C951A020E27243001015B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		30C951A220E27243001015B9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		30C951A220E27243001015B9 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		30C951A520E27243001015B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		30C951A720E27245001015B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30C951AA20E27245001015B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -72,6 +74,8 @@
 		30C951E420E2CD26001015B9 /* MBRequestOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBRequestOperationTests.swift; sourceTree = "<group>"; };
 		30C9521720E2D9A1001015B9 /* MBPlaceBatchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBPlaceBatchRequest.swift; sourceTree = "<group>"; };
 		30C9521920E2E85C001015B9 /* MBPlaceBatchRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBPlaceBatchRequestTests.swift; sourceTree = "<group>"; };
+		30C9521E20E2F49D001015B9 /* MapViewController+MBPlaceBatchRequestDelegate+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapViewController+MBPlaceBatchRequestDelegate+extension.swift"; sourceTree = "<group>"; };
+		30C9522020E2F860001015B9 /* MapViewController+UISearchBarDelegate+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapViewController+UISearchBarDelegate+extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,10 +117,10 @@
 		30C9519F20E27243001015B9 /* musicbrainz-places */ = {
 			isa = PBXGroup;
 			children = (
+				30C9521C20E2F2F7001015B9 /* ViewControllers */,
 				30C951C120E274F2001015B9 /* Networking */,
 				30C951C020E274E3001015B9 /* Models */,
 				30C951A020E27243001015B9 /* AppDelegate.swift */,
-				30C951A220E27243001015B9 /* ViewController.swift */,
 				30C951A420E27243001015B9 /* Main.storyboard */,
 				30C951A720E27245001015B9 /* Assets.xcassets */,
 				30C951A920E27245001015B9 /* LaunchScreen.storyboard */,
@@ -176,6 +180,24 @@
 				30C951CE20E29ED2001015B9 /* String+extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		30C9521C20E2F2F7001015B9 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				30C9521D20E2F3CE001015B9 /* MapViewController */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		30C9521D20E2F3CE001015B9 /* MapViewController */ = {
+			isa = PBXGroup;
+			children = (
+				30C951A220E27243001015B9 /* MapViewController.swift */,
+				30C9521E20E2F49D001015B9 /* MapViewController+MBPlaceBatchRequestDelegate+extension.swift */,
+				30C9522020E2F860001015B9 /* MapViewController+UISearchBarDelegate+extension.swift */,
+			);
+			path = MapViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,7 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30C951A320E27243001015B9 /* ViewController.swift in Sources */,
+				30C951A320E27243001015B9 /* MapViewController.swift in Sources */,
 				30C951C320E27523001015B9 /* MusicBrainzEndpoint.swift in Sources */,
 				30C951DA20E2A3F5001015B9 /* MBPlaceModel.swift in Sources */,
 				30C951D620E2A319001015B9 /* MBCoordinatesModel.swift in Sources */,
@@ -288,6 +310,8 @@
 				30C9521820E2D9A1001015B9 /* MBPlaceBatchRequest.swift in Sources */,
 				30C951C720E28905001015B9 /* BaseNetworking.swift in Sources */,
 				30C951A120E27243001015B9 /* AppDelegate.swift in Sources */,
+				30C9522120E2F860001015B9 /* MapViewController+UISearchBarDelegate+extension.swift in Sources */,
+				30C9521F20E2F49D001015B9 /* MapViewController+MBPlaceBatchRequestDelegate+extension.swift in Sources */,
 				30C951D420E2A2C5001015B9 /* MBLifeSpanModel.swift in Sources */,
 				30C951D820E2A361001015B9 /* MBPlacesModel.swift in Sources */,
 			);
