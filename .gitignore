@@ -1,11 +1,19 @@
 # Xcode
+<<<<<<< HEAD
 # 
+=======
+#
+>>>>>>> origin/master
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
 ## Build generated
 build/
 DerivedData/
+<<<<<<< HEAD
 .DS_Store
+=======
+
+>>>>>>> origin/master
 ## Various settings
 *.pbxuser
 !default.pbxuser
@@ -19,7 +27,12 @@ xcuserdata/
 
 ## Other
 *.moved-aside
+<<<<<<< HEAD
 *.xcuserstate
+=======
+*.xccheckout
+*.xcscmblueprint
+>>>>>>> origin/master
 
 ## Obj-C/Swift specific
 *.hmap
@@ -27,6 +40,21 @@ xcuserdata/
 *.dSYM.zip
 *.dSYM
 
+<<<<<<< HEAD
+=======
+## Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# Swift Package Manager
+#
+# Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
+# Packages/
+# Package.pins
+# Package.resolved
+.build/
+
+>>>>>>> origin/master
 # CocoaPods
 #
 # We recommend against adding the Pods directory to your .gitignore. However
@@ -34,3 +62,25 @@ xcuserdata/
 # https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
 #
 # Pods/
+<<<<<<< HEAD
+=======
+
+# Carthage
+#
+# Add this line if you want to avoid checking in source code from Carthage dependencies.
+# Carthage/Checkouts
+
+Carthage/Build
+
+# fastlane
+#
+# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
+# screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://docs.fastlane.tools/best-practices/source-control/#source-control
+
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+>>>>>>> origin/master
