@@ -1,0 +1,27 @@
+{
+"created": "2018-06-26T12:53:54.368Z",
+"count": 1,
+"offset": 0,
+"places": [
+{
+"id": "99c63b53-118b-475a-ba99-e0aa79f68744",
+"type": "Indoor arena",
+"score": "100",
+"name": "Arena Berlin",
+"address": "Eichenstraße 4, 12435 Berlin",
+"coordinates": {
+"latitude": "52.49691",
+"longitude": "13.45404"
+},
+"area": {
+"id": "c9ac1239-e832-41bc-9930-e252a1fd1105",
+"name": "Berlin",
+"sort-name": "Berlin"
+},
+"life-span": {
+"begin": "1995",
+"ended": null
+}
+}
+]
+}

@@ -15,6 +15,9 @@
 		30C951B620E27245001015B9 /* musicbrainz_placesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C951B520E27245001015B9 /* musicbrainz_placesTests.swift */; };
 		30C951C320E27523001015B9 /* MusicBrainzEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C951C220E27523001015B9 /* MusicBrainzEndpoint.swift */; };
 		30C951C520E279FF001015B9 /* MusicBrainzEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C951C420E279FF001015B9 /* MusicBrainzEndpointTests.swift */; };
+		30C951C720E28905001015B9 /* BaseNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C951C620E28905001015B9 /* BaseNetworking.swift */; };
+		30C951C920E28E67001015B9 /* BaseNetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C951C820E28E67001015B9 /* BaseNetworkingTests.swift */; };
+		30C951CC20E29944001015B9 /* PlaceQueryRespond.mock in Resources */ = {isa = PBXBuildFile; fileRef = 30C951CB20E29944001015B9 /* PlaceQueryRespond.mock */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,9 @@
 		30C951B720E27245001015B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30C951C220E27523001015B9 /* MusicBrainzEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicBrainzEndpoint.swift; sourceTree = "<group>"; };
 		30C951C420E279FF001015B9 /* MusicBrainzEndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicBrainzEndpointTests.swift; sourceTree = "<group>"; };
+		30C951C620E28905001015B9 /* BaseNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetworking.swift; sourceTree = "<group>"; };
+		30C951C820E28E67001015B9 /* BaseNetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetworkingTests.swift; sourceTree = "<group>"; };
+		30C951CB20E29944001015B9 /* PlaceQueryRespond.mock */ = {isa = PBXFileReference; lastKnownFileType = text; path = PlaceQueryRespond.mock; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,9 +102,11 @@
 		30C951B420E27245001015B9 /* musicbrainz-placesTests */ = {
 			isa = PBXGroup;
 			children = (
+				30C951CA20E29919001015B9 /* DataMocks */,
 				30C951B520E27245001015B9 /* musicbrainz_placesTests.swift */,
 				30C951B720E27245001015B9 /* Info.plist */,
 				30C951C420E279FF001015B9 /* MusicBrainzEndpointTests.swift */,
+				30C951C820E28E67001015B9 /* BaseNetworkingTests.swift */,
 			);
 			path = "musicbrainz-placesTests";
 			sourceTree = "<group>";
@@ -113,9 +121,18 @@
 		30C951C120E274F2001015B9 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				30C951C620E28905001015B9 /* BaseNetworking.swift */,
 				30C951C220E27523001015B9 /* MusicBrainzEndpoint.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		30C951CA20E29919001015B9 /* DataMocks */ = {
+			isa = PBXGroup;
+			children = (
+				30C951CB20E29944001015B9 /* PlaceQueryRespond.mock */,
+			);
+			path = DataMocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +226,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30C951CC20E29944001015B9 /* PlaceQueryRespond.mock in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,6 +239,7 @@
 			files = (
 				30C951A320E27243001015B9 /* ViewController.swift in Sources */,
 				30C951C320E27523001015B9 /* MusicBrainzEndpoint.swift in Sources */,
+				30C951C720E28905001015B9 /* BaseNetworking.swift in Sources */,
 				30C951A120E27243001015B9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -230,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				30C951C520E279FF001015B9 /* MusicBrainzEndpointTests.swift in Sources */,
+				30C951C920E28E67001015B9 /* BaseNetworkingTests.swift in Sources */,
 				30C951B620E27245001015B9 /* musicbrainz_placesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
