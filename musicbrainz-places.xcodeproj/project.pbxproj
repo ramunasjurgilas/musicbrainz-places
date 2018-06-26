@@ -18,6 +18,16 @@
 		30C951C720E28905001015B9 /* BaseNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C951C620E28905001015B9 /* BaseNetworking.swift */; };
 		30C951C920E28E67001015B9 /* BaseNetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C951C820E28E67001015B9 /* BaseNetworkingTests.swift */; };
 		30C951CC20E29944001015B9 /* PlaceQueryRespond.mock in Resources */ = {isa = PBXBuildFile; fileRef = 30C951CB20E29944001015B9 /* PlaceQueryRespond.mock */; };
+		30C951CF20E29ED2001015B9 /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C951CE20E29ED2001015B9 /* String+extension.swift */; };
+		30C951D220E29F72001015B9 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C951D120E29F72001015B9 /* Utils.swift */; };
+		30C951D420E2A2C5001015B9 /* MBLifeSpanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C951D320E2A2C5001015B9 /* MBLifeSpanModel.swift */; };
+		30C951D620E2A319001015B9 /* MBCoordinatesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C951D520E2A319001015B9 /* MBCoordinatesModel.swift */; };
+		30C951D820E2A361001015B9 /* MBPlacesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C951D720E2A361001015B9 /* MBPlacesModel.swift */; };
+		30C951DA20E2A3F5001015B9 /* MBPlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C951D920E2A3F5001015B9 /* MBPlaceModel.swift */; };
+		30C951DB20E2B23B001015B9 /* MBCoordinatesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C951D520E2A319001015B9 /* MBCoordinatesModel.swift */; };
+		30C951DC20E2B243001015B9 /* MBLifeSpanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C951D320E2A2C5001015B9 /* MBLifeSpanModel.swift */; };
+		30C951DD20E2B243001015B9 /* MBPlacesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C951D720E2A361001015B9 /* MBPlacesModel.swift */; };
+		30C951DE20E2B243001015B9 /* MBPlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C951D920E2A3F5001015B9 /* MBPlaceModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +56,12 @@
 		30C951C620E28905001015B9 /* BaseNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetworking.swift; sourceTree = "<group>"; };
 		30C951C820E28E67001015B9 /* BaseNetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetworkingTests.swift; sourceTree = "<group>"; };
 		30C951CB20E29944001015B9 /* PlaceQueryRespond.mock */ = {isa = PBXFileReference; lastKnownFileType = text; path = PlaceQueryRespond.mock; sourceTree = "<group>"; };
+		30C951CE20E29ED2001015B9 /* String+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
+		30C951D120E29F72001015B9 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		30C951D320E2A2C5001015B9 /* MBLifeSpanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBLifeSpanModel.swift; sourceTree = "<group>"; };
+		30C951D520E2A319001015B9 /* MBCoordinatesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBCoordinatesModel.swift; sourceTree = "<group>"; };
+		30C951D720E2A361001015B9 /* MBPlacesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBPlacesModel.swift; sourceTree = "<group>"; };
+		30C951D920E2A3F5001015B9 /* MBPlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBPlaceModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,11 +118,13 @@
 		30C951B420E27245001015B9 /* musicbrainz-placesTests */ = {
 			isa = PBXGroup;
 			children = (
+				30C951CD20E29EBB001015B9 /* Extensions */,
 				30C951CA20E29919001015B9 /* DataMocks */,
 				30C951B520E27245001015B9 /* musicbrainz_placesTests.swift */,
 				30C951B720E27245001015B9 /* Info.plist */,
 				30C951C420E279FF001015B9 /* MusicBrainzEndpointTests.swift */,
 				30C951C820E28E67001015B9 /* BaseNetworkingTests.swift */,
+				30C951D120E29F72001015B9 /* Utils.swift */,
 			);
 			path = "musicbrainz-placesTests";
 			sourceTree = "<group>";
@@ -114,6 +132,10 @@
 		30C951C020E274E3001015B9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				30C951D320E2A2C5001015B9 /* MBLifeSpanModel.swift */,
+				30C951D520E2A319001015B9 /* MBCoordinatesModel.swift */,
+				30C951D720E2A361001015B9 /* MBPlacesModel.swift */,
+				30C951D920E2A3F5001015B9 /* MBPlaceModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -133,6 +155,14 @@
 				30C951CB20E29944001015B9 /* PlaceQueryRespond.mock */,
 			);
 			path = DataMocks;
+			sourceTree = "<group>";
+		};
+		30C951CD20E29EBB001015B9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				30C951CE20E29ED2001015B9 /* String+extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,8 +269,12 @@
 			files = (
 				30C951A320E27243001015B9 /* ViewController.swift in Sources */,
 				30C951C320E27523001015B9 /* MusicBrainzEndpoint.swift in Sources */,
+				30C951DA20E2A3F5001015B9 /* MBPlaceModel.swift in Sources */,
+				30C951D620E2A319001015B9 /* MBCoordinatesModel.swift in Sources */,
 				30C951C720E28905001015B9 /* BaseNetworking.swift in Sources */,
 				30C951A120E27243001015B9 /* AppDelegate.swift in Sources */,
+				30C951D420E2A2C5001015B9 /* MBLifeSpanModel.swift in Sources */,
+				30C951D820E2A361001015B9 /* MBPlacesModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,8 +282,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30C951D220E29F72001015B9 /* Utils.swift in Sources */,
+				30C951CF20E29ED2001015B9 /* String+extension.swift in Sources */,
+				30C951DB20E2B23B001015B9 /* MBCoordinatesModel.swift in Sources */,
 				30C951C520E279FF001015B9 /* MusicBrainzEndpointTests.swift in Sources */,
+				30C951DC20E2B243001015B9 /* MBLifeSpanModel.swift in Sources */,
 				30C951C920E28E67001015B9 /* BaseNetworkingTests.swift in Sources */,
+				30C951DD20E2B243001015B9 /* MBPlacesModel.swift in Sources */,
+				30C951DE20E2B243001015B9 /* MBPlaceModel.swift in Sources */,
 				30C951B620E27245001015B9 /* musicbrainz_placesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

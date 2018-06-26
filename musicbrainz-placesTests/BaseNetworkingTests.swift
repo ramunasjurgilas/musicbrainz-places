@@ -40,19 +40,47 @@ class URLSessionMock: URLSession {
 
 class BaseNetworkingTests: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testExecuteSuccesGeneric() {
+    func testExecuteGenericsSuccess() {
+        let session = URLSessionMock()
+        session.data = "PlaceQueryRespond".mockData()
+        let request = BaseNetworking(endpoint: .place(query: "test", offset: 10, limit: 10), session: session)
         
+        let successExpectation = expectation(description: "On success")
+        request.execute(MBPlacesModel.self, onSuccess: { (result) in
+            print(result)
+            successExpectation.fulfill()
+        }, onError: { (error) in
+            
+        })
+
+        waitForExpectations(timeout: 0.5) { (error) in
+            if let error = error {
+                XCTFail("Success block was not executed. \(error)")
+            }
+        }
     }
+    
+    func testExecuteGenericsError() {
+        let session = URLSessionMock()
+        session.data = "CrapData".data(using: .utf8)
+        let request = BaseNetworking(endpoint: .place(query: "test", offset: 10, limit: 10), session: session)
+        
+        let errorExpectation = expectation(description: "On error")
+        request.execute(MBPlacesModel.self, onSuccess: { (data) in },
+                        onError: { (error) in errorExpectation.fulfill() })
+        
+        waitForExpectations(timeout: 0.5) { (error) in
+            if let error = error {
+                XCTFail("Success block was not executed. \(error)")
+            }
+        }
+    }
+
+    
+    
+    
+    
+    
     
     func testRealExecute() {
         let request = BaseNetworking(endpoint: .place(query: "Studio", offset: 1, limit: 1))

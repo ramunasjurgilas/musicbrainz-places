@@ -11,7 +11,7 @@ import UIKit
 enum MBNetworkError: Int {
     case corruptedUrl = -1000
     case unknownNetworkError
-    
+    case jsonDecodingError
 }
 
 extension MBNetworkError {
@@ -42,17 +42,18 @@ class BaseNetworking: NSObject {
             else {
                 onError(error ?? MBNetworkError.unknownNetworkError.error)
             }
-            let s = String(data: data ?? Data(), encoding: .utf8)
-            print("FROM BACKEND FOR URL: \(self.endpoint.url()?.absoluteString ?? "NO URL") JSON from backend : \(s ?? "NO DATA!!!") -> Stats code: \((urlResponse as? HTTPURLResponse)?.statusCode ?? -111111111)" )
         }
         task.resume()
     }
     
-    func execute<T>(_ type: T.Type, completion: @escaping (T?, Error?) -> Swift.Void) where T : Decodable {
+    func execute<T>(_ type: T.Type, onSuccess: @escaping (T) -> (), onError: @escaping (Error) -> ()) where T : Decodable {
         execute(onSuccess: { (data) in
-            // TODO: parse data
-        }, onError: { (error) in
-            // TODO: call error
-        })
+            do {
+                let result = try JSONDecoder().decode(type, from: data)
+                onSuccess(result)
+            } catch let error {
+                onError(error)
+            }
+        }, onError: { onError($0) })
     }
 }
