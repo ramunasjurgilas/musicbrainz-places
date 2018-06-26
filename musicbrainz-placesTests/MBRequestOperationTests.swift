@@ -9,7 +9,7 @@
 import XCTest
 
 // Create a partial mock by subclassing the original class
-fileprivate class URLSessionDataTaskMock: URLSessionDataTask {
+class URLSessionDataTaskMock: URLSessionDataTask {
     private let closure: () -> Void
     init(closure: @escaping () -> Void) {
         self.closure = closure
@@ -22,7 +22,7 @@ fileprivate class URLSessionDataTaskMock: URLSessionDataTask {
     }
 }
 
-fileprivate class URLSessionMock: URLSession {
+class URLSessionMock: URLSession {
     typealias CompletionHandler = (Data?, URLResponse?, Error?) -> Void
     
     var data: Data?

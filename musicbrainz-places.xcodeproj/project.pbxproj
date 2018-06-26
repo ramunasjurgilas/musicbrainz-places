@@ -32,6 +32,9 @@
 		30C951E220E2C1D0001015B9 /* BaseNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C951C620E28905001015B9 /* BaseNetworking.swift */; };
 		30C951E320E2C1DF001015B9 /* MusicBrainzEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C951C220E27523001015B9 /* MusicBrainzEndpoint.swift */; };
 		30C951E520E2CD26001015B9 /* MBRequestOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C951E420E2CD26001015B9 /* MBRequestOperationTests.swift */; };
+		30C9521820E2D9A1001015B9 /* MBPlaceBatchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9521720E2D9A1001015B9 /* MBPlaceBatchRequest.swift */; };
+		30C9521A20E2E85C001015B9 /* MBPlaceBatchRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9521920E2E85C001015B9 /* MBPlaceBatchRequestTests.swift */; };
+		30C9521B20E2E8C4001015B9 /* MBPlaceBatchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9521720E2D9A1001015B9 /* MBPlaceBatchRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,8 @@
 		30C951D920E2A3F5001015B9 /* MBPlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBPlaceModel.swift; sourceTree = "<group>"; };
 		30C951DF20E2C079001015B9 /* MBRequestOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBRequestOperation.swift; sourceTree = "<group>"; };
 		30C951E420E2CD26001015B9 /* MBRequestOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBRequestOperationTests.swift; sourceTree = "<group>"; };
+		30C9521720E2D9A1001015B9 /* MBPlaceBatchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBPlaceBatchRequest.swift; sourceTree = "<group>"; };
+		30C9521920E2E85C001015B9 /* MBPlaceBatchRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBPlaceBatchRequestTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +135,7 @@
 				30C951C420E279FF001015B9 /* MusicBrainzEndpointTests.swift */,
 				30C951C820E28E67001015B9 /* BaseNetworkingTests.swift */,
 				30C951E420E2CD26001015B9 /* MBRequestOperationTests.swift */,
+				30C9521920E2E85C001015B9 /* MBPlaceBatchRequestTests.swift */,
 			);
 			path = "musicbrainz-placesTests";
 			sourceTree = "<group>";
@@ -151,6 +157,7 @@
 				30C951C620E28905001015B9 /* BaseNetworking.swift */,
 				30C951C220E27523001015B9 /* MusicBrainzEndpoint.swift */,
 				30C951DF20E2C079001015B9 /* MBRequestOperation.swift */,
+				30C9521720E2D9A1001015B9 /* MBPlaceBatchRequest.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -278,6 +285,7 @@
 				30C951DA20E2A3F5001015B9 /* MBPlaceModel.swift in Sources */,
 				30C951D620E2A319001015B9 /* MBCoordinatesModel.swift in Sources */,
 				30C951E020E2C079001015B9 /* MBRequestOperation.swift in Sources */,
+				30C9521820E2D9A1001015B9 /* MBPlaceBatchRequest.swift in Sources */,
 				30C951C720E28905001015B9 /* BaseNetworking.swift in Sources */,
 				30C951A120E27243001015B9 /* AppDelegate.swift in Sources */,
 				30C951D420E2A2C5001015B9 /* MBLifeSpanModel.swift in Sources */,
@@ -294,11 +302,13 @@
 				30C951DB20E2B23B001015B9 /* MBCoordinatesModel.swift in Sources */,
 				30C951C520E279FF001015B9 /* MusicBrainzEndpointTests.swift in Sources */,
 				30C951E320E2C1DF001015B9 /* MusicBrainzEndpoint.swift in Sources */,
+				30C9521B20E2E8C4001015B9 /* MBPlaceBatchRequest.swift in Sources */,
 				30C951E120E2C1A2001015B9 /* MBRequestOperation.swift in Sources */,
 				30C951DC20E2B243001015B9 /* MBLifeSpanModel.swift in Sources */,
 				30C951C920E28E67001015B9 /* BaseNetworkingTests.swift in Sources */,
 				30C951E220E2C1D0001015B9 /* BaseNetworking.swift in Sources */,
 				30C951DD20E2B243001015B9 /* MBPlacesModel.swift in Sources */,
+				30C9521A20E2E85C001015B9 /* MBPlaceBatchRequestTests.swift in Sources */,
 				30C951E520E2CD26001015B9 /* MBRequestOperationTests.swift in Sources */,
 				30C951DE20E2B243001015B9 /* MBPlaceModel.swift in Sources */,
 			);
