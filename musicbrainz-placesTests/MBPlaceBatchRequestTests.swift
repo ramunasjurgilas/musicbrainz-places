@@ -30,24 +30,7 @@ class MBPlaceBatchRequestTests: XCTestCase, MBPlaceBatchRequestDelegate {
             XCTAssert(self.places.count == 1, "Missing or to much places were found.")
         }
     }
-    
-    func testExample() {
-        expect = expectation(description: "Batch fetch")
-        let batch = MBPlaceBatchRequest()
-        batch.delegate = self
-        batch.requests = baseNetworking()
-        batch.fetch()
-        
-        waitForExpectations(timeout: 2) { (error) in
-            if let error = error {
-                XCTFail("Did failed batch fetched. \(error)")
-                return
-            }
-            XCTAssert(self.places.count > 0, "Places count must be more than 0.")
-            XCTAssert(self.places.count == batch.requests.count, "Missing or to much places were found.")
-        }
-    }
-    
+
     func didFetch(places: [MBPlaceModel]) {
         self.places += places
     }

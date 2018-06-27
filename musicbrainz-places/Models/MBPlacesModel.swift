@@ -9,7 +9,7 @@
 import Foundation
 
 struct MBPlacesModel: Codable {
-    let count: Int
+    let count: Int?
     let offset: Int
     let places: [MBPlaceModel]
 }
@@ -19,7 +19,7 @@ extension MBPlacesModel {
     
     func nextOffsetFor(_ limit: Int) -> Int? {
         let nextOffset = limit + offset
-        if (nextOffset > maxCount) || (nextOffset > count) {
+        if (nextOffset >= maxCount) || (nextOffset >= count ?? 0) {
             return nil
         }
         return nextOffset

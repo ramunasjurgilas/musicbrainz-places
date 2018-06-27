@@ -23,7 +23,7 @@ class MusicBrainzEndpointTests: XCTestCase {
         
         let offsetItem = URLQueryItem(name: "offset", value: "10")
         let limitItem = URLQueryItem(name: "limit", value: "5")
-        let queryItem = URLQueryItem(name: "query", value: query)
+        let queryItem = URLQueryItem(name: "query", value: "begin:[1990 TO 2018] AND " + query)
         
         XCTAssert(components?.queryItems?.contains(offsetItem) ?? false, "Offset must be added to URL")
         XCTAssert(components?.queryItems?.contains(limitItem) ?? false, "Limit must be added to URL")

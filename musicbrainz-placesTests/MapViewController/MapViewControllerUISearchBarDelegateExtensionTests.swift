@@ -9,12 +9,6 @@
 import XCTest
 fileprivate var expect: XCTestExpectation?
 
-class MBPlaceBatchRequestMock: MBPlaceBatchRequest {
-    override func fetch() {
-        expect?.fulfill()
-    }
-}
-
 class MapViewControllerUISearchBarDelegateExtensionTests: XCTestCase {
     
     var vc: MapViewController!
