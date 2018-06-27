@@ -10,7 +10,7 @@ import UIKit
 
 protocol MBPlaceBatchRequestDelegate {
     func didFetch(places: [MBPlaceModel])
-    func didCompleteFetching()
+    func didCompleteFetching(_ error: Error?)
 }
 
 class MBPlaceBatchRequest: NSObject {
@@ -41,14 +41,15 @@ class MBPlaceBatchRequest: NSObject {
         let request = BaseNetworking(endpoint: endpoint, session: session)
         request.execute(MBPlacesModel.self, onSuccess: { [weak self] (places) in
             self?.delegate?.didFetch(places: places.places)
+            print("--->> Count: \(places.count)")
             if let nextOffset = places.nextOffsetFor(limit) {
                 self?.fetchUsing(query, limit: limit, offset: nextOffset)
             }
             else {
-                self?.delegate?.didCompleteFetching()
+                self?.delegate?.didCompleteFetching(nil)
             }
         }, onError: { [weak self] (error) in
-            self?.delegate?.didCompleteFetching()
+            self?.delegate?.didCompleteFetching(error)
         })
     }
     
@@ -83,7 +84,7 @@ class MBPlaceBatchRequest: NSObject {
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == "operations" {
             if queue.operations.count == 0 {
-                delegate?.didCompleteFetching()
+                delegate?.didCompleteFetching(nil)
             }
         }
         else {

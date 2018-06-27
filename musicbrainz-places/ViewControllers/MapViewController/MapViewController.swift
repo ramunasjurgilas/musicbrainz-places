@@ -12,7 +12,6 @@ import MapKit
 class MapViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var loadPlacesButton: UIButton!
     
     var placeBatchRequest = MBPlaceBatchRequest()
@@ -27,8 +26,10 @@ class MapViewController: UIViewController {
     // MARK: - IBAction
     
     @IBAction func didClickLoadPlaces(_ sender: UIButton) {
-        placeBatchRequest.fetchUsing(mapView.luceneSearchCoordinateQuery(), limit: 20)
+        mapView.removeAnnotations(mapView.annotations)
         
+        loadPlacesButton.isEnabled = false
+        placeBatchRequest.fetchUsing(mapView.luceneSearchCoordinateQuery(), limit: 20)
     }
     
 

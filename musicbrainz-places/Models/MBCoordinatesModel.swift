@@ -7,8 +7,10 @@
 //
 
 import Foundation
+import MapKit
 
 struct MBCoordinatesModel: Codable {
     let latitude: String
     let longitude: String
 }
+

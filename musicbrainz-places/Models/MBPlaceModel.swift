@@ -10,8 +10,8 @@ import Foundation
 
 struct MBPlaceModel: Codable {
     let name: String
-    var coordinates: MBCoordinatesModel?
-    let lifeSpan: MBLifeSpanModel?
+    var coordinates: MBCoordinatesModel
+    let lifeSpan: MBLifeSpanModel
     
     private enum CodingKeys : String, CodingKey {
         case name, coordinates, lifeSpan = "life-span"

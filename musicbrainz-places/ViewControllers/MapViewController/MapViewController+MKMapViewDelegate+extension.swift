@@ -11,4 +11,15 @@ import MapKit
 
 extension MapViewController: MKMapViewDelegate {
     
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "placeAnnotation")
+        if annotationView == nil {
+            annotationView = MBPlaceAnnotationView(annotation: annotation, reuseIdentifier: "placeAnnotation")
+        }
+        if let markerAnnotation = annotationView as? MKMarkerAnnotationView {
+            markerAnnotation.clusteringIdentifier = "annotation"
+        }
+        return annotationView
+
+    }
 }
