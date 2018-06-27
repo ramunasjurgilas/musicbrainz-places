@@ -12,8 +12,9 @@ import MapKit
 class MapViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
-    let placeBatchRequest = MBPlaceBatchRequest()
+    var placeBatchRequest = MBPlaceBatchRequest()
     
     override func viewDidLoad() {
         super.viewDidLoad()

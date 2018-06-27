@@ -13,13 +13,16 @@
         <!--Map View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MapViewController" customModule="musicbrainz_places" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapViewController" id="BYZ-38-t0r" customClass="MapViewController" customModule="musicbrainz_places" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ige-RE-iCk">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="csr-i2-rVI"/>
+                                </connections>
                             </mapView>
                             <searchBar contentMode="redraw" placeholder="MusicBrainz Query" translatesAutoresizingMaskIntoConstraints="NO" id="qsb-r2-0Ek">
                                 <rect key="frame" x="16" y="30" width="343" height="56"/>
@@ -44,6 +47,7 @@
                     </view>
                     <connections>
                         <outlet property="mapView" destination="ige-RE-iCk" id="vP2-Qu-heI"/>
+                        <outlet property="searchBar" destination="qsb-r2-0Ek" id="5Ak-kq-Egy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
