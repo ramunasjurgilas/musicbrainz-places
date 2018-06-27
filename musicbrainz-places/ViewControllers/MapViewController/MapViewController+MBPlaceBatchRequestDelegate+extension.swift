@@ -13,7 +13,7 @@ extension MapViewController: MBPlaceBatchRequestDelegate {
     func didFetch(places: [MBPlaceModel]) {
         DispatchQueue.main.async {
             places.forEach {
-                self.mapView.addAnnotation(MBPlaceAnnotation($0))
+                self.mapView.addAnnotation(MBPlaceAnnotation($0, delegate: self))
             }
         }
     }

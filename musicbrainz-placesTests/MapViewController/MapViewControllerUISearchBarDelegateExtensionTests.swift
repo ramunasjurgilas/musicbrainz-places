@@ -26,22 +26,4 @@ class MapViewControllerUISearchBarDelegateExtensionTests: XCTestCase {
         let _ =  vc.view
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testSearchBarSearchButtonClickedWithText() {
-        expect = expectation(description: "Expect to call fetch")
-        vc.placeBatchRequest = MBPlaceBatchRequestMock()
-        vc.searchBar.text = "Good"
-        vc.searchBarSearchButtonClicked(vc.searchBar)
-        
-        waitForExpectations(timeout: 0.2) { (error) in
-            if let error = error {
-                XCTFail("Fetch method should be executed! \(error)")
-            }
-        }
-    }
-
 }

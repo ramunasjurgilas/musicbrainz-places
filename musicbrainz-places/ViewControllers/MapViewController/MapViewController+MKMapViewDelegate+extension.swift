@@ -12,14 +12,13 @@ import MapKit
 extension MapViewController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        (annotation as? MBPlaceAnnotation)?.startTimer()
+        
         var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "placeAnnotation")
         if annotationView == nil {
-            annotationView = MBPlaceAnnotationView(annotation: annotation, reuseIdentifier: "placeAnnotation")
+            annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: "placeAnnotation")
         }
-        if let markerAnnotation = annotationView as? MKMarkerAnnotationView {
-            markerAnnotation.clusteringIdentifier = "annotation"
-        }
+        
         return annotationView
-
     }
 }

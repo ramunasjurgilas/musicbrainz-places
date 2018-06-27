@@ -26,7 +26,12 @@ class MapViewController: UIViewController {
     // MARK: - IBAction
     
     @IBAction func didClickLoadPlaces(_ sender: UIButton) {
-        mapView.removeAnnotations(mapView.annotations)
+        mapView.annotations.forEach {
+            if let annotation = $0 as? MBPlaceAnnotation {
+                annotation.startTimer()
+                mapView.removeAnnotation(annotation)
+            }
+        }
         
         loadPlacesButton.isEnabled = false
         placeBatchRequest.fetchUsing(mapView.luceneSearchCoordinateQuery(), limit: 20)

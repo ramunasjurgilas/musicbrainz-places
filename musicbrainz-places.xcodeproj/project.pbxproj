@@ -51,9 +51,10 @@
 		30C9523B20E39AF8001015B9 /* MapViewController+MBPlaceBatchRequestDelegate+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9521E20E2F49D001015B9 /* MapViewController+MBPlaceBatchRequestDelegate+extension.swift */; };
 		30C9523C20E39AFC001015B9 /* MBPlaceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9523720E398F5001015B9 /* MBPlaceAnnotation.swift */; };
 		30C9523D20E39B09001015B9 /* MBPlaceModel+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9523920E399AF001015B9 /* MBPlaceModel+extension.swift */; };
-		30C9523F20E39EB8001015B9 /* MBPlaceAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9523E20E39EB8001015B9 /* MBPlaceAnnotationView.swift */; };
 		30C9524120E3A39E001015B9 /* MBConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9524020E3A39E001015B9 /* MBConfig.swift */; };
 		30C9524220E3A39E001015B9 /* MBConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9524020E3A39E001015B9 /* MBConfig.swift */; };
+		30C9524420E3AF54001015B9 /* MapViewController+MBPlaceAnnotationDelegate+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9524320E3AF54001015B9 /* MapViewController+MBPlaceAnnotationDelegate+extension.swift */; };
+		30C9524520E3AF54001015B9 /* MapViewController+MBPlaceAnnotationDelegate+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9524320E3AF54001015B9 /* MapViewController+MBPlaceAnnotationDelegate+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,8 +102,8 @@
 		30C9523520E39285001015B9 /* MBPlacesModelExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBPlacesModelExtensionTests.swift; sourceTree = "<group>"; };
 		30C9523720E398F5001015B9 /* MBPlaceAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBPlaceAnnotation.swift; sourceTree = "<group>"; };
 		30C9523920E399AF001015B9 /* MBPlaceModel+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MBPlaceModel+extension.swift"; sourceTree = "<group>"; };
-		30C9523E20E39EB8001015B9 /* MBPlaceAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBPlaceAnnotationView.swift; sourceTree = "<group>"; };
 		30C9524020E3A39E001015B9 /* MBConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBConfig.swift; sourceTree = "<group>"; };
+		30C9524320E3AF54001015B9 /* MapViewController+MBPlaceAnnotationDelegate+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapViewController+MBPlaceAnnotationDelegate+extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,8 +232,8 @@
 				30C951A220E27243001015B9 /* MapViewController.swift */,
 				30C9521E20E2F49D001015B9 /* MapViewController+MBPlaceBatchRequestDelegate+extension.swift */,
 				30C9522C20E37C64001015B9 /* MapViewController+MKMapViewDelegate+extension.swift */,
+				30C9524320E3AF54001015B9 /* MapViewController+MBPlaceAnnotationDelegate+extension.swift */,
 				30C9523720E398F5001015B9 /* MBPlaceAnnotation.swift */,
-				30C9523E20E39EB8001015B9 /* MBPlaceAnnotationView.swift */,
 			);
 			path = MapViewController;
 			sourceTree = "<group>";
@@ -360,7 +361,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				30C9524120E3A39E001015B9 /* MBConfig.swift in Sources */,
-				30C9523F20E39EB8001015B9 /* MBPlaceAnnotationView.swift in Sources */,
 				30C9523A20E399AF001015B9 /* MBPlaceModel+extension.swift in Sources */,
 				30C951A320E27243001015B9 /* MapViewController.swift in Sources */,
 				30C951C320E27523001015B9 /* MusicBrainzEndpoint.swift in Sources */,
@@ -373,6 +373,7 @@
 				30C9523820E398F5001015B9 /* MBPlaceAnnotation.swift in Sources */,
 				30C951A120E27243001015B9 /* AppDelegate.swift in Sources */,
 				30C9522D20E37C64001015B9 /* MapViewController+MKMapViewDelegate+extension.swift in Sources */,
+				30C9524420E3AF54001015B9 /* MapViewController+MBPlaceAnnotationDelegate+extension.swift in Sources */,
 				30C9521F20E2F49D001015B9 /* MapViewController+MBPlaceBatchRequestDelegate+extension.swift in Sources */,
 				30C951D420E2A2C5001015B9 /* MBLifeSpanModel.swift in Sources */,
 				30C951D820E2A361001015B9 /* MBPlacesModel.swift in Sources */,
@@ -388,6 +389,7 @@
 				30C951DB20E2B23B001015B9 /* MBCoordinatesModel.swift in Sources */,
 				30C951C520E279FF001015B9 /* MusicBrainzEndpointTests.swift in Sources */,
 				30C951E320E2C1DF001015B9 /* MusicBrainzEndpoint.swift in Sources */,
+				30C9524520E3AF54001015B9 /* MapViewController+MBPlaceAnnotationDelegate+extension.swift in Sources */,
 				30C9521B20E2E8C4001015B9 /* MBPlaceBatchRequest.swift in Sources */,
 				30C951E120E2C1A2001015B9 /* MBRequestOperation.swift in Sources */,
 				30C9523D20E39B09001015B9 /* MBPlaceModel+extension.swift in Sources */,

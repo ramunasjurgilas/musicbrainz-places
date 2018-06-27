@@ -9,7 +9,6 @@
 import XCTest
 
 class MBPlaceBatchRequestTests: XCTestCase, MBPlaceBatchRequestDelegate {
-    
     var places: [MBPlaceModel] = []
     var expect: XCTestExpectation!
     
@@ -53,7 +52,7 @@ class MBPlaceBatchRequestTests: XCTestCase, MBPlaceBatchRequestDelegate {
         self.places += places
     }
     
-    func didCompleteFetching() {
+    func didCompleteFetching(_ error: Error?) {
         expect.fulfill()
     }
 
