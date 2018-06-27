@@ -24,7 +24,6 @@ class MapViewController: UIViewController {
         loadPlaces()
     }
 
-
     // MARK: - IBAction
     
     @IBAction func didClickLoadPlaces(_ sender: UIButton) {
@@ -39,6 +38,6 @@ class MapViewController: UIViewController {
     
     func loadPlaces() {
         loadPlacesButton.isEnabled = false
-        placeBatchRequest.fetchUsing(mapView.luceneSearchCoordinateQuery(), limit: 20)
+        placeBatchRequest.fetchUsing(mapView.luceneSearchCoordinateQuery(), limit: MBConfig.queryPlacesLimit)
     }
 }
