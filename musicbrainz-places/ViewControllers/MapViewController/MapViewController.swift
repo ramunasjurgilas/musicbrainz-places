@@ -20,6 +20,8 @@ class MapViewController: UIViewController {
         super.viewDidLoad()
         
         placeBatchRequest.delegate = self
+        
+        loadPlaces()
     }
 
 
@@ -32,10 +34,11 @@ class MapViewController: UIViewController {
                 mapView.removeAnnotation(annotation)
             }
         }
-        
+        loadPlaces()
+    }
+    
+    func loadPlaces() {
         loadPlacesButton.isEnabled = false
         placeBatchRequest.fetchUsing(mapView.luceneSearchCoordinateQuery(), limit: 20)
     }
-    
-
 }

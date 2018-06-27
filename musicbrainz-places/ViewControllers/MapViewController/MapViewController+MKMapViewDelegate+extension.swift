@@ -10,7 +10,7 @@ import Foundation
 import MapKit
 
 extension MapViewController: MKMapViewDelegate {
-    
+
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         (annotation as? MBPlaceAnnotation)?.startTimer()
         
