@@ -32,9 +32,19 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="RRP-zI-CbW"/>
                                 </connections>
                             </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mye-iz-eO2">
+                                <rect key="frame" x="146" y="617" width="83" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Load places"/>
+                                <connections>
+                                    <action selector="didClickLoadPlaces:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tKm-5D-lp0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Mye-iz-eO2" secondAttribute="bottom" constant="20" id="7Sf-rX-AYW"/>
+                            <constraint firstItem="Mye-iz-eO2" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="C7c-jl-RoI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qsb-r2-0Ek" secondAttribute="trailing" constant="16" id="HwU-0q-M8D"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="ige-RE-iCk" secondAttribute="top" constant="20" id="SiQ-5c-qRQ"/>
                             <constraint firstItem="qsb-r2-0Ek" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="ee5-D6-ITX"/>
@@ -46,6 +56,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="loadPlacesButton" destination="Mye-iz-eO2" id="Jxh-B7-Wad"/>
                         <outlet property="mapView" destination="ige-RE-iCk" id="vP2-Qu-heI"/>
                         <outlet property="searchBar" destination="qsb-r2-0Ek" id="5Ak-kq-Egy"/>
                     </connections>

@@ -14,3 +14,14 @@ struct MBPlacesModel: Codable {
     let places: [MBPlaceModel]
 }
 
+extension MBPlacesModel {
+    var maxCount: Int { get { return 100 } }
+    
+    func nextOffsetFor(_ limit: Int) -> Int? {
+        let nextOffset = limit + offset
+        if (nextOffset > maxCount) || (nextOffset > count) {
+            return nil
+        }
+        return nextOffset
+    }
+}

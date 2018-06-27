@@ -18,8 +18,9 @@ extension MusicBrainzEndpoint {
     func url() -> URL? {
         switch self {
         case .place(let query, let offset, let limit):
-            guard let escapedQuery = query.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) else { return nil }
-//            "%22Nice%20Studio%22%20AND%20arid:0383dadf-2a4e-4d10-a46a-e9e041da8eb3"
+            let q = "begin:[1990 TO 2018] AND \(query)"
+            guard let escapedQuery = q.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) else { return nil }
+
             let string = "\(MusicBrainzEndpoint.kURL)place/?query=\(escapedQuery)&fmt=json&offset=\(offset)&limit=\(limit)"
             print(string)
             return URL(string: string)

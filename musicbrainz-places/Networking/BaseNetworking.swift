@@ -21,16 +21,24 @@ extension MBNetworkError {
 }
 
 class BaseNetworking: NSObject {
-    var endpoint: MusicBrainzEndpoint
-    let session: URLSession
+    var endpoint: MusicBrainzEndpoint?
+    var session: URLSession
     
-    init(endpoint: MusicBrainzEndpoint, session: URLSession = .shared) {
+    init(session: URLSession = .shared) {
+        self.session = .shared
+        
+        super.init()
+    }
+    
+    init(endpoint: MusicBrainzEndpoint, session: URLSession? = .shared) {
         self.endpoint = endpoint
-        self.session = session
+        self.session = session ?? .shared
+        
+        super.init()
     }
     
     func execute(onSuccess: @escaping (Data) -> (), onError: @escaping (Error) -> ()) {
-        guard let url = endpoint.url() else {
+        guard let url = endpoint?.url() else {
             onError(MBNetworkError.corruptedUrl.error)
             return
         }

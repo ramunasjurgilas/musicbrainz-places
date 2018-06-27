@@ -15,7 +15,9 @@ protocol MBPlaceBatchRequestDelegate {
 
 class MBPlaceBatchRequest: NSObject {
     let queue = OperationQueue()
+    var session: URLSession?
     var delegate: MBPlaceBatchRequestDelegate?
+    
     var query: String? {
         didSet {
             requests = baseNetworking()
@@ -34,6 +36,22 @@ class MBPlaceBatchRequest: NSObject {
         queue.addObserver(self, forKeyPath: "operations", options: NSKeyValueObservingOptions(rawValue: 0), context: nil)
     }
 
+    func fetchUsing(_ query: String, limit: Int, offset: Int = 0) {
+        let endpoint = MusicBrainzEndpoint.place(query: query, offset: offset, limit: limit)
+        let request = BaseNetworking(endpoint: endpoint, session: session)
+        request.execute(MBPlacesModel.self, onSuccess: { [weak self] (places) in
+            self?.delegate?.didFetch(places: places.places)
+            if let nextOffset = places.nextOffsetFor(limit) {
+                self?.fetchUsing(query, limit: limit, offset: nextOffset)
+            }
+            else {
+                self?.delegate?.didCompleteFetching()
+            }
+        }, onError: { [weak self] (error) in
+            self?.delegate?.didCompleteFetching()
+        })
+    }
+    
     func fetch() {
         queue.cancelAllOperations()
         
