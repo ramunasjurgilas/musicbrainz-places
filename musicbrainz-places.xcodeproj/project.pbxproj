@@ -36,7 +36,7 @@
 		30C9521A20E2E85C001015B9 /* MBPlaceBatchRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9521920E2E85C001015B9 /* MBPlaceBatchRequestTests.swift */; };
 		30C9521B20E2E8C4001015B9 /* MBPlaceBatchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9521720E2D9A1001015B9 /* MBPlaceBatchRequest.swift */; };
 		30C9521F20E2F49D001015B9 /* MapViewController+MBPlaceBatchRequestDelegate+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9521E20E2F49D001015B9 /* MapViewController+MBPlaceBatchRequestDelegate+extension.swift */; };
-		30C9522420E2FBCF001015B9 /* MapViewControllerUISearchBarDelegateExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9522320E2FBCF001015B9 /* MapViewControllerUISearchBarDelegateExtensionTests.swift */; };
+		30C9522420E2FBCF001015B9 /* MapViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9522320E2FBCF001015B9 /* MapViewControllerTests.swift */; };
 		30C9522620E2FBFB001015B9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C951A220E27243001015B9 /* MapViewController.swift */; };
 		30C9522820E301FA001015B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30C951A420E27243001015B9 /* Main.storyboard */; };
 		30C9522B20E378FE001015B9 /* MKMapView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9522A20E378FE001015B9 /* MKMapView+extension.swift */; };
@@ -93,7 +93,7 @@
 		30C9521720E2D9A1001015B9 /* MBPlaceBatchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBPlaceBatchRequest.swift; sourceTree = "<group>"; };
 		30C9521920E2E85C001015B9 /* MBPlaceBatchRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MBPlaceBatchRequestTests.swift; sourceTree = "<group>"; };
 		30C9521E20E2F49D001015B9 /* MapViewController+MBPlaceBatchRequestDelegate+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapViewController+MBPlaceBatchRequestDelegate+extension.swift"; sourceTree = "<group>"; };
-		30C9522320E2FBCF001015B9 /* MapViewControllerUISearchBarDelegateExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerUISearchBarDelegateExtensionTests.swift; sourceTree = "<group>"; };
+		30C9522320E2FBCF001015B9 /* MapViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerTests.swift; sourceTree = "<group>"; };
 		30C9522A20E378FE001015B9 /* MKMapView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+extension.swift"; sourceTree = "<group>"; };
 		30C9522C20E37C64001015B9 /* MapViewController+MKMapViewDelegate+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapViewController+MKMapViewDelegate+extension.swift"; sourceTree = "<group>"; };
 		30C9522F20E3913C001015B9 /* PlaceQueryRespond2.mock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PlaceQueryRespond2.mock; sourceTree = "<group>"; };
@@ -241,7 +241,7 @@
 		30C9522220E2FBB1001015B9 /* MapViewController */ = {
 			isa = PBXGroup;
 			children = (
-				30C9522320E2FBCF001015B9 /* MapViewControllerUISearchBarDelegateExtensionTests.swift */,
+				30C9522320E2FBCF001015B9 /* MapViewControllerTests.swift */,
 			);
 			path = MapViewController;
 			sourceTree = "<group>";
@@ -405,7 +405,7 @@
 				30C9523620E39285001015B9 /* MBPlacesModelExtensionTests.swift in Sources */,
 				30C9524220E3A39E001015B9 /* MBConfig.swift in Sources */,
 				30C951DE20E2B243001015B9 /* MBPlaceModel.swift in Sources */,
-				30C9522420E2FBCF001015B9 /* MapViewControllerUISearchBarDelegateExtensionTests.swift in Sources */,
+				30C9522420E2FBCF001015B9 /* MapViewControllerTests.swift in Sources */,
 				30C9522620E2FBFB001015B9 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
